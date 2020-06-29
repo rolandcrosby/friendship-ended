@@ -1,0 +1,129 @@
+/* styles */
+/* called by your view template */
+
+/* You might want to try something fancier: */
+/* less: http://lesscss.org/ */
+
+* {
+  box-sizing: border-box;
+}
+
+main {
+  width: 800px;
+  height: 600px;
+  position: relative;
+  background-size: cover;
+  overflow: hidden;
+  background-position: center center;
+}
+
+main, .left-image, .right-image {
+  background-size: cover;
+  background-position: center center;
+}
+
+.friendship-ended, .now {
+  position: absolute;
+  white-space: nowrap;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-family: Arial;
+  font-weight: bold;
+  transform-origin: top left;
+  background-repeat: repeat-x;
+  padding-right: 1em;
+}
+
+.friendship-ended {
+  font-size: 125px;
+  letter-spacing: -7.9px;
+  top: -33px;
+  left: 4px;
+  transform: scaleX(0.44);
+  background-image: linear-gradient(0deg, #3fbd25 25%, #cb4810 75%);
+  -webkit-text-stroke: 1.5px #00f;
+}
+
+.now {
+  top: 76px;
+  left: 315px;
+  font-size: 79px;
+  line-height: 81px;
+  transform: scaleX(0.41);
+  letter-spacing: -2px;
+  background-image: linear-gradient(0deg, #61c417 15%, #cb2271 85%);
+  -webkit-text-stroke: 1px #00f;
+}
+
+.left-image, .right-image {
+  position: absolute;
+}
+
+.left-image {
+  width: 169px;
+  height: 268px;
+  top: 331px;
+  left: 0px;
+}
+
+.right-image {
+  top: 360px;
+  left: 578px;
+  width: 221px;
+  height: 240px;
+}
+
+main::after {
+  content: " ";
+  background: url('https://cdn.glitch.com/530fa0ae-86d4-4f4c-b33f-d6a0c55fa5ab%2Fxs.png?v=1593393283832') top left no-repeat;
+  display: block;
+  position: absolute;
+  width: 800px;
+  height: 600px;
+}
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 25px;
+  min-height: 100vh;
+}
+
+footer {
+  color: #004;
+  font-style: italic;
+  margin-top: 2em;
+  line-height: 1.5;
+}
+
+p {
+  margin: 0;
+}
+
+footer p span {
+  margin-right: 10px
+}
+
+footer input {
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  border: 0;
+  border-bottom: 1.5px solid #004;
+}
+
+.fileField {
+  border: 1.5px solid #004;
+  border-radius: 12px;
+  font-style: normal;
+  color: inherit;
+  padding: 1px 6px;
+  font-size: 90%;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-left: 3px;
+}
+
+.fileField input {
+  display: none;
+}

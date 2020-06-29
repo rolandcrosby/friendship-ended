@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Friendship Ended</title>
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=844">
+    <link rel="stylesheet" href="/style.css">
+    <!-- Prod: -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <!-- Dev: -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+    <script src="/client.js" defer></script>
+  </head>
+  <body>
+    <div id="app">
+      <main v-bind:style="{ backgroundImage: bgImageProp }">
+        <div class="friendship-ended">Friendship ended with {{textA}}</div>
+        <div class="now">Now<br>{{textB}}<br>is my<br>best friend</div>
+        <div v-bind:style="{ backgroundImage: leftImageProp }" class="left-image"></div>
+        <div v-bind:style="{ backgroundImage: rightImageProp }" class="right-image"></div>
+      </main>
+      <footer>
+        <p>Friendship ended with <input v-model="personA">. Now <input v-model="personB"> is my best friend</p>
+        <p><span>background:</span><label class="fileField">select a file<input name="bg" type="file"></label></p>
+        <p><span>left:</span><label class="fileField">select a file<input name="left" type="file"></label></p>
+        <p><span>right:</span><label class="fileField">select a file<input name="right" type="file"></label></p>
+      </footer>
+    </div>
+  </body>
+</html>
